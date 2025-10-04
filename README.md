@@ -29,9 +29,9 @@
 ## 🚀 **FEATURED PROJECTS**
 | 🌟 **Project** | 📖 **Description** | 🧩 **Tech Used** |
 |----------------|--------------------|------------------|
-| 🌐 [**Smart Study Hub**](#) | A web platform for students to share and access study materials | HTML, CSS, JS |
+| 🌐 [**Smart Study Hub**](http://127.0.0.1:5500/) | A web platform for students to share and access study materials | HTML, CSS, JS |
 | 🛋️ [**SofaVista**](#) | A modern furniture design & e-commerce concept | React.js, Tailwind |
-| ⚡ [**Tech Gadget Launch Page**](#) | A sleek landing page for product showcases | HTML, CSS |
+| ⚡ [**Tech Gadget Launch Page**](http://127.0.0.1:5500/) | A sleek landing page for product showcases | HTML, CSS |
 
 ---
 
