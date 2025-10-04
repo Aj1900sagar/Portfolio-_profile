@@ -69,8 +69,8 @@
 
 ## 🎧 **NOW PLAYING ON SPOTIFY**
 <p align="center">
-  <a href="https://spotify-github-profile.vercel.app/api/view?uid=yourspotifyid&redirect=true" target="_blank">
-    <img src="https://spotify-github-profile.vercel.app/api/view?uid=yourspotifyid&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true" alt="Spotify Now Playing" />
+  <a href="https://open.spotify.com" target="_blank">
+    <img src="https://appfairness.org/wp-content/uploads/2020/09/logo-spotify.png">
   </a>
 </p>
  
