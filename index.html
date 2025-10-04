@@ -1,0 +1,155 @@
+<!--
+Modern Personal Portfolio Website for Sagar Vishwakarma
+Showcasing skills, projects, achievements, and contact details
+Responsive, minimalistic, with smooth animations
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sagar Vishwakarma — Portfolio</title>
+  <meta name="description" content="Portfolio of Sagar Vishwakarma — skills, projects, resume, achievements, and contact">
+  <meta name="author" content="Sagar Vishwakarma">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa7bf;--accent:#7c3aed;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071028);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1000px;margin:32px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;position:sticky;top:0;background:var(--bg);padding:10px 28px;z-index:999}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;color:#021026;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px;box-shadow:0 6px 30px rgba(0,0,0,0.5)}
+    .hero-top{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--accent)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{font-size:32px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 12px}
+    .cta{margin-top:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .social-links{display:flex;gap:12px;margin-top:12px}
+    .social-links a{color:var(--muted);font-size:20px;text-decoration:none}
+    .section{margin-top:50px}
+    .section h2{font-size:24px;margin-bottom:18px;color:var(--accent)}
+    .skills, .projects, .resume-content, .contact-form{display:flex;flex-direction:column;gap:12px}
+    .skill, .project-card, .resume-item{background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef8;width:100%}
+    button{padding:10px 16px;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700}
+    footer{margin-top:40px;color:var(--muted);text-align:center;font-size:14px}
+    @media(max-width:880px){.hero-top{flex-direction:column;align-items:center}} 
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- Hero Section -->
+    <header>
+      <div class="brand">
+        <div class="logo">Aj</div>
+        <div>
+          <div style="font-weight:800">Sagar Vishwakarma (Aj)</div>
+          <div style="font-size:12px;color:var(--muted)">Aspiring Software Engineer | Web Developer | Tech Enthusiast | UX/UI Designer | AI/ML Enthusiast | Data Engineer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero card fade-up" id="home">
+      <div class="hero-top">
+        <div class="avatar"><img src="SAGAR.jpg" alt="Sagar Vishwakarma (Aj)"></div>
+        <div>
+          <h1>Hello — I'm <span style="color:var(--accent)">Sagar Vishwakarma | Co - Founder</span></h1>
+          <p class="lead">Aspiring Software Engineer • Frontend & Full‑stack Web Developer. I build accessible, fast, and beautiful web experiences.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">See My Work</a>
+            <a class="btn" href="#resume" style="margin-left:10px;background:#06b6d4">View Resume</a>
+            <a class="btn" href="Resume (2) (1).pdf" download style="margin-left:10px;background:#22c55e">Download Resume</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Aj1900sagar" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sagar-vishwakarma1900/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@MrAJSagar" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/aj1900_sagar/" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>I am Sagar Vishwakarma, an aspiring software engineer and web developer with a passion for creating modern and efficient web applications. I enjoy solving complex problems and continuously learning new technologies to improve my skills.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">C & C++</div>
+        <div class="skill">AI/ML</div>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">JavaScript & React</div>
+        <div class="skill">Python & Django</div>
+        <div class="skill">SQL & Databases</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Sigma_web_series</p>
+          <a href="https://github.com/Aj1900sagar/Sigma_web_series">GitHub</a> | <a href="#">Live Demo</a>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+          <p>Assignment for Website</p>
+          <a href="https://github.com/Aj1900sagar/assignment_for_website">GitHub</a> | <a href="#">Live Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section" id="resume">
+      <h2> Current Position /&nbsp;Experience</h2>
+        <div class="resume-content">
+        <div class="resume-item">
+          <h4>Education</h4>
+          <p>Now pursuing a Bachelor's degree in Computer Science and Engineering with Artificial Intelligence and Machine Learning as focus areas to learn technologies, location Delhi Ghaziabad.</p>
+        </div>
+        <div class="resume-item">
+          <h4>Internships</h4>
+          <p>I am looking for internship opportunities to gain practical experience in software development, particularly in web development and AI, and also UX/UI design.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="66b7f3ad-dea4-4aff-b312-d0a56f5ebc25">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Sagar Vishwakarma. All rights reserved.
+    </footer>
+
+  </main>
+</body>
+</html>
