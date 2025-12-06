@@ -252,6 +252,103 @@ footer {
     height: 120px;
   }
 }
+    /* Smooth transitions for all UI elements */
+.btn,
+button,
+.skill,
+.project-card,
+nav a,
+.social-links a,
+.avatar,
+.resume-item {
+  transition: 0.3s ease;
+}
+
+/* --------------------------
+   BUTTON HOVER
+--------------------------- */
+.btn:hover,
+button:hover {
+  background: #9f57ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* --------------------------
+   NAV HOVER
+--------------------------- */
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--accent);
+  transform: translateY(-2px);
+}
+
+/* --------------------------
+   SOCIAL LINK HOVER
+--------------------------- */
+.social-links a:hover {
+  color: var(--accent);
+  transform: scale(1.2);
+  text-shadow: 0 0 12px var(--accent);
+}
+
+/* --------------------------
+   SKILL CARD HOVER
+--------------------------- */
+.skill:hover {
+  background: #141f35;
+  transform: scale(1.07);
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+/* --------------------------
+   PROJECT CARD HOVER
+--------------------------- */
+.project-card:hover {
+  background: #141f35;
+  transform: translateY(-8px);
+  border: 1px solid var(--accent);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.25);
+}
+
+/* --------------------------
+   RESUME ITEM HOVER
+--------------------------- */
+.resume-item:hover {
+  background: #141f35;
+  transform: translateY(-5px);
+  border: 1px solid var(--accent);
+  box-shadow: 0 6px 22px rgba(124, 58, 237, 0.2);
+}
+
+/* --------------------------
+   AVATAR IMAGE HOVER
+--------------------------- */
+.avatar:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.55);
+}
+
+/* --------------------------
+   SECTION TITLE HOVER
+--------------------------- */
+.section h2:hover {
+  color: white;
+  text-shadow: 0 0 14px var(--accent);
+  transform: translateX(4px);
+}
+
+/* --------------------------
+   INPUT FOCUS EFFECT
+--------------------------- */
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+  outline: none;
+}
+
 
   </style>
 </head>
@@ -369,5 +466,6 @@ footer {
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
