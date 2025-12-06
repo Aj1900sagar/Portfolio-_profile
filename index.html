@@ -1,8 +1,4 @@
-<!--
-Modern Personal Portfolio Website for Sagar Vishwakarma
-Showcasing skills, projects, achievements, and contact details
-Responsive, minimalistic, with smooth animations
--->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,32 +8,251 @@ Responsive, minimalistic, with smooth animations
   <meta name="description" content="Portfolio of Sagar Vishwakarma — skills, projects, resume, achievements, and contact">
   <meta name="author" content="Sagar Vishwakarma">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa7bf;--accent:#7c3aed;--glass:rgba(255,255,255,0.04)}
-    *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071028);-webkit-font-smoothing:antialiased}
-    .wrap{max-width:1000px;margin:32px auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;position:sticky;top:0;background:var(--bg);padding:10px 28px;z-index:999}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;color:#021026;font-weight:700}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px;box-shadow:0 6px 30px rgba(0,0,0,0.5)}
-    .hero-top{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-    .avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--accent)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    h1{font-size:32px;margin:0}
-    p.lead{color:var(--muted);margin:6px 0 12px}
-    .cta{margin-top:12px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
-    .social-links{display:flex;gap:12px;margin-top:12px}
-    .social-links a{color:var(--muted);font-size:20px;text-decoration:none}
-    .section{margin-top:50px}
-    .section h2{font-size:24px;margin-bottom:18px;color:var(--accent)}
-    .skills, .projects, .resume-content, .contact-form{display:flex;flex-direction:column;gap:12px}
-    .skill, .project-card, .resume-item{background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef8;width:100%}
-    button{padding:10px 16px;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700}
-    footer{margin-top:40px;color:var(--muted);text-align:center;font-size:14px}
-    @media(max-width:880px){.hero-top{flex-direction:column;align-items:center}} 
+  :root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa7bf;
+  --accent: #7c3aed;
+}
+
+/* GENERAL RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: #e6eef8;
+  background: var(--bg);
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 20px;
+  background: #111a2e;
+  border-radius: 16px;
+}
+
+.hero-top {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+p.lead {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-links a {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+/* SKILLS + PROJECTS GRID */
+.skills,
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.skill,
+.project-card,
+.resume-item {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* INPUTS */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: #0f1724;
+  border: 1px solid #1a2335;
+  border-radius: 8px;
+  color: #e6eef8;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 780px) {
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .hero-top {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .wrap {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -65,7 +280,7 @@ Responsive, minimalistic, with smooth animations
       <div class="hero-top">
         <div class="avatar"><img src="SAGAR.jpg" alt="Sagar Vishwakarma (Aj)"></div>
         <div>
-          <h1>Hello — I'm <span style="color:var(--accent)">Sagar Vishwakarma | Co - Founder</span></h1>
+          <h1>Hello — I'm <span style="color:var(--accent)">Sagar Vishwakarma</span></h1>
           <p class="lead">Aspiring Software Engineer • Frontend & Full‑stack Web Developer. I build accessible, fast, and beautiful web experiences.</p>
           <div class="cta">
             <a class="btn" href="#projects">See My Work</a>
@@ -151,5 +366,6 @@ Responsive, minimalistic, with smooth animations
     </footer>
 
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
