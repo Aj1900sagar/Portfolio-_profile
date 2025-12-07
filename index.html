@@ -17,20 +17,22 @@
   --muted: #9aa7bf;
   --accent: #7c3aed;
 }
- /* Force horizontal buttons on all devices */
+/* Fix: Buttons horizontal + never overflow on phone */
 .btn-row {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 10px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap !important; /* Prevent stacking */
+  gap: 8px;
+  flex-wrap: wrap; /* If screen is very small, wrap to next line safely */
 }
 
 .btn-row a {
-  white-space: nowrap; /* Prevent button text from breaking to next line */
+  padding: 8px 12px;
+  font-size: 14px;
+  white-space: normal; /* Allow text to wrap */
+  text-align: center;
+  max-width: 120px; /* Prevent overflow */
 }
-
 
 
 /* Mobile alignment */
