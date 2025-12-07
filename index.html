@@ -17,6 +17,31 @@
   --muted: #9aa7bf;
   --accent: #7c3aed;
 }
+    /* Button group layout */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Mobile alignment */
+@media (max-width: 780px) {
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Larger screens (laptop, desktop) */
+@media (min-width: 781px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+    
     .resume-content {
       display: flex;
       flex-direction: column;
@@ -422,7 +447,7 @@ textarea:focus {
         <div>
           <h1>Hello — I'm <span style="color:var(--accent)">Sagar Vishwakarma</span></h1>
           <p class="lead">Aspiring Software Engineer • Frontend & Full‑stack Web Developer. I build accessible, fast, and beautiful web experiences.</p>
-          <div class="cta">
+          <div class="cta btn-group">
             <a class="btn" href="#projects">See My Work</a>
             <a class="btn" href="#resume" style="margin-left:10px;background:#06b6d4">View Resume</a>
             <a class="btn" href="Resume (2) (1).pdf" download style="margin-left:10px;background:#22c55e">Download Resume</a>
@@ -521,6 +546,7 @@ textarea:focus {
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
