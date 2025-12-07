@@ -17,22 +17,20 @@
   --muted: #9aa7bf;
   --accent: #7c3aed;
 }
-    /* Always keep buttons in one horizontal row */
-.btn-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;     /* Wrap if screen is too small */
+ /* Force horizontal buttons on all devices */
+.btn-row {
+  display: flex !important;
+  flex-direction: row !important;
   gap: 10px;
+  justify-content: center;
   align-items: center;
-  justify-content: center; /* Centers on small screens */
+  flex-wrap: nowrap !important; /* Prevent stacking */
 }
 
-/* Laptop/PC screens */
-@media (min-width: 781px) {
-  .btn-group {
-    justify-content: flex-start; /* Left aligned on big screen */
-  }
+.btn-row a {
+  white-space: nowrap; /* Prevent button text from breaking to next line */
 }
+
 
 
 /* Mobile alignment */
@@ -457,7 +455,7 @@ textarea:focus {
         <div>
           <h1>Hello — I'm <span style="color:var(--accent)">Sagar Vishwakarma</span></h1>
           <p class="lead">Aspiring Software Engineer • Frontend & Full‑stack Web Developer. I build accessible, fast, and beautiful web experiences.</p>
-          <div class="cta btn-group">
+         <div class="cta btn-row">
             <a class="btn" href="#projects">See My Work</a>
             <a class="btn" href="#resume" style="margin-left:10px;background:#06b6d4">View Resume</a>
             <a class="btn" href="Resume (2) (1).pdf" download style="margin-left:10px;background:#22c55e">Download Resume</a>
@@ -556,6 +554,7 @@ textarea:focus {
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
