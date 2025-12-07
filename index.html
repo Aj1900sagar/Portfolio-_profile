@@ -17,13 +17,23 @@
   --muted: #9aa7bf;
   --accent: #7c3aed;
 }
-    /* Button group layout */
+    /* Always keep buttons in one horizontal row */
 .btn-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;     /* Wrap if screen is too small */
   gap: 10px;
   align-items: center;
+  justify-content: center; /* Centers on small screens */
 }
+
+/* Laptop/PC screens */
+@media (min-width: 781px) {
+  .btn-group {
+    justify-content: flex-start; /* Left aligned on big screen */
+  }
+}
+
 
 /* Mobile alignment */
 @media (max-width: 780px) {
@@ -546,6 +556,7 @@ textarea:focus {
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
