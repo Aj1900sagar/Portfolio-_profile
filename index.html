@@ -2118,6 +2118,10 @@ footer strong {
         Skills
       </a>
 
+      <a href="#coding-profiles">
+        Coding
+      </a>
+
       <a href="#projects">
         Projects
       </a>
@@ -2680,6 +2684,166 @@ footer strong {
 
 </section>
 
+
+
+
+<!-- =========================================================
+     DSA / CODING PROFILES
+========================================================= -->
+
+<section class="section" id="coding-profiles">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div class="section-label">
+        02.5 — DSA & Coding
+      </div>
+
+      <h2>
+        I solve. I learn. I improve.
+      </h2>
+
+      <p>
+        Follow my problem-solving journey across
+        the coding platforms I use regularly.
+      </p>
+
+    </div>
+
+    <div class="coding-profiles">
+
+      <!-- LEETCODE -->
+      <article class="coding-profile reveal"
+               style="--profile-glow:#ffa116">
+
+        <div class="coding-profile-head">
+
+          <img
+            class="platform-icon"
+            src="https://leetcode.com/static/images/LeetCode_logo_rvs.png"
+            alt="LeetCode"
+            loading="lazy"
+            onerror="this.src='https://cdn.simpleicons.org/leetcode/FFA116'"
+          >
+
+          <span class="platform-type">
+            Problem Solving
+          </span>
+
+        </div>
+
+        <h3>
+          LeetCode
+        </h3>
+
+        <p>
+          Practicing algorithms, data structures,
+          problem solving and interview-style questions.
+        </p>
+
+        <a
+          class="coding-profile-link"
+          href="https://leetcode.com/u/vishwakarmasagar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View LeetCode Profile
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+
+      </article>
+
+
+      <!-- GEEKSFORGEEKS -->
+      <article class="coding-profile reveal"
+               style="--profile-glow:#2f8d46">
+
+        <div class="coding-profile-head">
+
+          <img
+            class="platform-icon"
+            src="https://media.geeksforgeeks.org/gfg-gg-logo.svg"
+            alt="GeeksforGeeks"
+            loading="lazy"
+            onerror="this.src='https://cdn.simpleicons.org/geeksforgeeks/2F8D46'"
+          >
+
+          <span class="platform-type">
+            DSA Practice
+          </span>
+
+        </div>
+
+        <h3>
+          GeeksforGeeks
+        </h3>
+
+        <p>
+          Strengthening DSA concepts through coding
+          practice, tutorials and structured problems.
+        </p>
+
+        <a
+          class="coding-profile-link"
+          href="https://www.geeksforgeeks.org/profile/vishwakarman9bk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View GFG Profile
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+
+      </article>
+
+
+      <!-- CODE360 -->
+      <article class="coding-profile reveal"
+               style="--profile-glow:#ff6b35">
+
+        <div class="coding-profile-head">
+
+          <img
+            class="platform-icon"
+            src="https://www.naukri.com/code360/favicon.ico"
+            alt="Naukri Code360"
+            loading="lazy"
+            onerror="this.src='https://cdn.simpleicons.org/codingninjas/DD6620'"
+          >
+
+          <span class="platform-type">
+            Coding Platform
+          </span>
+
+        </div>
+
+        <h3>
+          Naukri Code360
+        </h3>
+
+        <p>
+          Practicing coding problems and interview
+          preparation with the Code360 platform.
+        </p>
+
+        <a
+          class="coding-profile-link"
+          href="https://www.naukri.com/code360/profile/997d3820-cca8-4dff-932e-449f1a3da082"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Code360 Profile
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- =========================================================
@@ -3592,6 +3756,140 @@ document.getElementById(
 @media(prefers-reduced-motion:reduce){
   .float-chip,.quiet-star{animation:none}
 }
+
+/* =========================================================
+   DSA / CODING PROFILES
+========================================================= */
+
+.coding-profiles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.coding-profile{
+  position:relative;
+  min-height:205px;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:21px;
+  background:
+    linear-gradient(145deg,rgba(15,23,42,.76),rgba(8,12,21,.66));
+  transition:
+    transform .4s var(--ease),
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+.coding-profile::before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  right:-85px;
+  top:-85px;
+  border-radius:50%;
+  background:var(--profile-glow,#8b5cf6);
+  opacity:.10;
+  filter:blur(30px);
+  transition:transform .5s ease,opacity .5s ease;
+}
+
+.coding-profile:hover{
+  transform:translateY(-9px);
+  border-color:var(--border-hover);
+  box-shadow:0 25px 60px rgba(0,0,0,.28);
+}
+
+.coding-profile:hover::before{
+  transform:scale(1.5);
+  opacity:.16;
+}
+
+.coding-profile-head{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.platform-icon{
+  width:48px;
+  height:48px;
+  padding:9px;
+  object-fit:contain;
+  border-radius:13px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.07);
+  transition:transform .35s ease;
+}
+
+.coding-profile:hover .platform-icon{
+  transform:scale(1.08) rotate(-3deg);
+}
+
+.platform-type{
+  color:#64748b;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.coding-profile h3{
+  position:relative;
+  margin-top:20px;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:19px;
+}
+
+.coding-profile p{
+  position:relative;
+  margin-top:7px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+}
+
+.coding-profile-link{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  width:fit-content;
+  margin-top:auto;
+  padding-top:18px;
+  color:var(--text-2);
+  font-size:10px;
+  font-weight:800;
+  transition:gap .25s ease,color .25s ease;
+}
+
+.coding-profile-link:hover{
+  gap:10px;
+  color:var(--primary-2);
+}
+
+@media(max-width:900px){
+  .coding-profiles{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .coding-profiles{
+    grid-template-columns:1fr;
+  }
+
+  .coding-profile{
+    min-height:190px;
+  }
+}
+
 </style>
 
 </body>
