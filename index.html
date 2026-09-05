@@ -3509,6 +3509,91 @@ document.getElementById(
 </script>
 
 
+
+
+<!-- Subtle ambient floating layer -->
+<div class="ambient-float" aria-hidden="true">
+  <span class="float-chip chip-a">AI</span>
+  <span class="float-chip chip-b">&lt;/&gt;</span>
+  <span class="float-chip chip-c">ML</span>
+  <span class="float-chip chip-d">✦</span>
+  <span class="quiet-star" data-note="UmF1bmFrIEtoYW4="></span>
+</div>
+
+<style>
+/* =========================================================
+   EXTRA AMBIENT FLOATING MOTION
+   Pure CSS — lightweight and mobile safe.
+========================================================= */
+.ambient-float{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.float-chip{
+  position:absolute;
+  display:grid;
+  place-items:center;
+  min-width:38px;
+  height:38px;
+  padding:0 10px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  background:rgba(255,255,255,.025);
+  color:rgba(196,181,253,.32);
+  font:700 10px/1 "Inter",sans-serif;
+  letter-spacing:.08em;
+  backdrop-filter:blur(10px);
+  box-shadow:0 12px 40px rgba(0,0,0,.18);
+  animation:ambientDrift 10s ease-in-out infinite;
+}
+
+.chip-a{left:7%;top:27%;animation-delay:-2s;transform:rotate(-8deg)}
+.chip-b{right:8%;top:20%;animation-delay:-5s;transform:rotate(8deg)}
+.chip-c{right:13%;bottom:24%;animation-delay:-7s;transform:rotate(-6deg)}
+.chip-d{left:12%;bottom:17%;animation-delay:-1s;font-size:14px}
+
+@keyframes ambientDrift{
+  0%,100%{translate:0 0;opacity:.32}
+  50%{translate:12px -24px;opacity:.62}
+}
+
+/* A deliberately quiet single star: visible only as ambient light.
+   The private note is not rendered into the page. */
+.quiet-star{
+  position:absolute;
+  left:50%;
+  top:18%;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:rgba(196,181,253,.32);
+  box-shadow:0 0 18px rgba(167,139,250,.45);
+  animation:quietStar 7s ease-in-out infinite;
+}
+
+@keyframes quietStar{
+  0%,100%{transform:translate3d(0,0,0) scale(.75);opacity:.12}
+  50%{transform:translate3d(22px,35px,0) scale(1.35);opacity:.5}
+}
+
+@media(max-width:700px){
+  .float-chip{transform:scale(.82);}
+  .chip-a{left:3%;top:31%}
+  .chip-b{right:3%;top:17%}
+  .chip-c{right:4%;bottom:19%}
+  .chip-d{left:5%;bottom:12%}
+  .quiet-star{top:14%;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .float-chip,.quiet-star{animation:none}
+}
+</style>
+
 </body>
 </html>
 ```
