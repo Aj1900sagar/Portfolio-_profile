@@ -465,19 +465,28 @@ header.scrolled {
   align-items: center;
   justify-content: center;
 
-  border-radius: 13px;
-
+  border-radius: 50%;
   overflow: hidden;
 
-  background:
-    rgba(15, 23, 42, 0.75);
+  background: #080c15;
 
-  border:
-    1px solid rgba(99, 102, 241, 0.35);
+  border: 2px solid transparent;
+
+  background-image:
+    linear-gradient(#080c15, #080c15),
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1,
+      #22d3ee
+    );
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 
   box-shadow:
-    0 0 20px rgba(59, 130, 246, 0.22),
-    0 0 35px rgba(139, 92, 246, 0.12);
+    0 0 15px rgba(139,92,246,.25),
+    0 0 30px rgba(34,211,238,.10);
 
   transition:
     transform .3s var(--ease),
@@ -488,9 +497,19 @@ header.scrolled {
   width: 100%;
   height: 100%;
 
-  object-fit: contain;
+  object-fit: cover;
+
+  border-radius: 50%;
 
   display: block;
+}
+
+.brand:hover .logo {
+  transform: translateY(-2px) scale(1.05);
+
+  box-shadow:
+    0 0 20px rgba(139,92,246,.45),
+    0 0 35px rgba(34,211,238,.20);
 }
 
 .brand:hover .logo {
