@@ -2666,6 +2666,609 @@ footer strong {
 
   -webkit-user-select: none;
 }
+
+
+  /* =========================================================
+   CERTIFICATIONS
+   PREMIUM GLASS HORIZONTAL SLIDER
+========================================================= */
+
+.cert-glass-card {
+
+  position: relative;
+
+  width: 100%;
+
+  border:
+    1px solid rgba(255,255,255,.09);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15,23,42,.78),
+      rgba(8,12,21,.65)
+    );
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.30);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.cert-glass-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -180px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    var(--primary);
+
+  opacity: .10;
+
+  filter: blur(60px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.cert-track {
+
+  display: flex;
+
+  width: 100%;
+
+  transition:
+    transform .7s var(--ease);
+
+  will-change: transform;
+
+  touch-action: pan-y;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   EACH CERTIFICATE
+========================================================= */
+
+.certificate-slide {
+
+  flex:
+    0 0 100%;
+
+  min-width: 100%;
+
+  padding: 42px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    310px;
+
+  align-items: center;
+
+  gap: 45px;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.certificate-content {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.certificate-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color:
+    var(--primary-2);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+
+  text-transform: uppercase;
+}
+
+
+.certificate-badge i {
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 8px;
+
+  background:
+    rgba(139,92,246,.10);
+
+  border:
+    1px solid
+    rgba(139,92,246,.22);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.certificate-slide h3 {
+
+  margin-top: 20px;
+
+  max-width: 620px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      1.7rem,
+      4vw,
+      2.6rem
+    );
+
+  line-height: 1.08;
+
+  letter-spacing: -.045em;
+}
+
+
+.certificate-name {
+
+  margin-top: 15px;
+
+  color:
+    var(--text-2);
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.certificate-date {
+
+  margin-top: 3px;
+
+  color:
+    var(--muted);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.certificate-actions {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 25px;
+}
+
+
+.cert-btn {
+
+  min-height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding:
+    0 14px;
+
+  border-radius: 10px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  transition:
+    transform .25s var(--ease),
+    background .25s ease,
+    border-color .25s ease;
+}
+
+
+.cert-primary {
+
+  background:
+    var(--gradient);
+
+  box-shadow:
+    0 8px 25px
+    rgba(139,92,246,.20);
+}
+
+
+.cert-secondary {
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,.025);
+
+  color:
+    var(--text-2);
+}
+
+
+.cert-btn:hover {
+
+  transform:
+    translateY(-3px);
+}
+
+
+.cert-secondary:hover {
+
+  color: white;
+
+  border-color:
+    var(--border-hover);
+
+  background:
+    rgba(139,92,246,.08);
+}
+
+
+/* =========================================================
+   PDF PREVIEW
+========================================================= */
+
+.certificate-preview {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 205px;
+
+  padding: 7px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.35);
+
+  transform:
+    rotate(2deg);
+
+  transition:
+    transform .45s var(--ease),
+    box-shadow .45s ease;
+}
+
+
+/* PDF frame */
+
+.certificate-preview iframe {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: white;
+}
+
+
+.certificate-preview:hover {
+
+  transform:
+    rotate(0deg)
+    translateY(-5px);
+
+  box-shadow:
+    0 25px 65px
+    rgba(0,0,0,.45);
+}
+
+
+/* =========================================================
+   SLIDER CONTROLS
+========================================================= */
+
+.cert-controls {
+
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  border-top:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,.015);
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.cert-arrow {
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  color:
+    var(--text-2);
+
+  cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+
+.cert-arrow:hover {
+
+  transform:
+    translateY(-2px);
+
+  color: white;
+
+  border-color:
+    var(--border-hover);
+
+  background:
+    rgba(139,92,246,.10);
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.cert-dots {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.cert-dot {
+
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.20);
+
+  cursor: pointer;
+
+  transition:
+    width .3s var(--ease),
+    background .3s ease;
+}
+
+
+.cert-dot.active {
+
+  width: 22px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--cyan)
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .certificate-slide {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 35px;
+  }
+
+
+  .certificate-preview {
+
+    width:
+      min(100%, 390px);
+
+    height: 220px;
+
+    margin-inline: auto;
+
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .cert-glass-card {
+
+    border-radius: 21px;
+  }
+
+
+  .certificate-slide {
+
+    padding:
+      25px 20px 20px;
+
+    gap: 24px;
+  }
+
+
+  .certificate-slide h3 {
+
+    font-size:
+      1.65rem;
+  }
+
+
+  .certificate-preview {
+
+    width: 100%;
+
+    height: 180px;
+  }
+
+
+  .certificate-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .cert-btn {
+
+    width: 100%;
+  }
+
+
+  .cert-controls {
+
+    min-height: 62px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .certificate-slide {
+
+    padding:
+      22px 16px 18px;
+  }
+
+
+  .certificate-preview {
+
+    height: 165px;
+  }
+
+}
   
 
 </style>
@@ -3814,6 +4417,337 @@ footer strong {
   </div>
 
 </section>
+
+
+  <!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section class="section" id="certifications">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div class="section-label">
+        05 — Certifications
+      </div>
+
+      <h2>
+        Learning beyond the classroom.
+      </h2>
+
+      <p>
+        Certifications that support my technical journey.
+      </p>
+
+    </div>
+
+
+    <!-- GLASS CERTIFICATION CARD -->
+
+    <div class="cert-glass-card reveal">
+
+      <div class="cert-track" id="certTrack">
+
+
+        <!-- ================= CERTIFICATE 01 ================= -->
+
+        <article class="certificate-slide">
+
+          <div class="certificate-content">
+
+            <div class="certificate-badge">
+
+              <i class="fas fa-certificate"></i>
+
+              <span>
+                CERTIFICATION
+              </span>
+
+            </div>
+
+
+            <h3>
+              Introduction to Artificial Intelligence
+            </h3>
+
+
+            <p class="certificate-name">
+              Sagar Vishwakarma
+            </p>
+
+
+            <p class="certificate-date">
+              Issued · September 4, 2025
+            </p>
+
+
+            <div class="certificate-actions">
+
+              <a
+                href="certificate-1.pdf"
+                target="_blank"
+                class="cert-btn cert-primary"
+              >
+
+                <i class="fas fa-eye"></i>
+
+                View Certificate
+
+              </a>
+
+
+              <a
+                href="#"
+                target="_blank"
+                class="cert-btn cert-secondary"
+              >
+
+                Verify
+
+                <i class="fas fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- PDF PREVIEW -->
+
+          <div class="certificate-preview">
+
+            <iframe
+              src="certificate-1.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              title="Introduction to Artificial Intelligence Certificate"
+            ></iframe>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= CERTIFICATE 02 ================= -->
+
+        <article class="certificate-slide">
+
+          <div class="certificate-content">
+
+            <div class="certificate-badge">
+
+              <i class="fas fa-certificate"></i>
+
+              <span>
+                CERTIFICATION
+              </span>
+
+            </div>
+
+
+            <h3>
+              Machine Learning with Python
+            </h3>
+
+
+            <p class="certificate-name">
+              Sagar Vishwakarma
+            </p>
+
+
+            <p class="certificate-date">
+              Issued · 2025
+            </p>
+
+
+            <div class="certificate-actions">
+
+              <a
+                href="certificate-2.pdf"
+                target="_blank"
+                class="cert-btn cert-primary"
+              >
+
+                <i class="fas fa-eye"></i>
+
+                View Certificate
+
+              </a>
+
+
+              <a
+                href="#"
+                target="_blank"
+                class="cert-btn cert-secondary"
+              >
+
+                Verify
+
+                <i class="fas fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- PDF PREVIEW -->
+
+          <div class="certificate-preview">
+
+            <iframe
+              src="certificate-2.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              title="Machine Learning with Python Certificate"
+            ></iframe>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ================= CERTIFICATE 03 ================= -->
+
+        <article class="certificate-slide">
+
+          <div class="certificate-content">
+
+            <div class="certificate-badge">
+
+              <i class="fas fa-certificate"></i>
+
+              <span>
+                CERTIFICATION
+              </span>
+
+            </div>
+
+
+            <h3>
+              Data Science / Python Certification
+            </h3>
+
+
+            <p class="certificate-name">
+              Sagar Vishwakarma
+            </p>
+
+
+            <p class="certificate-date">
+              Issued · 2025
+            </p>
+
+
+            <div class="certificate-actions">
+
+              <a
+                href="certificate-3.pdf"
+                target="_blank"
+                class="cert-btn cert-primary"
+              >
+
+                <i class="fas fa-eye"></i>
+
+                View Certificate
+
+              </a>
+
+
+              <a
+                href="#"
+                target="_blank"
+                class="cert-btn cert-secondary"
+              >
+
+                Verify
+
+                <i class="fas fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- PDF PREVIEW -->
+
+          <div class="certificate-preview">
+
+            <iframe
+              src="certificate-3.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              title="Data Science Python Certificate"
+            ></iframe>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- ================= SLIDER CONTROLS ================= -->
+
+      <div class="cert-controls">
+
+        <button
+          class="cert-arrow"
+          id="certPrev"
+          aria-label="Previous certificate"
+        >
+
+          <i class="fas fa-arrow-left"></i>
+
+        </button>
+
+
+        <div class="cert-dots">
+
+          <button
+            class="cert-dot active"
+            data-slide="0"
+            aria-label="Certificate 1"
+          ></button>
+
+          <button
+            class="cert-dot"
+            data-slide="1"
+            aria-label="Certificate 2"
+          ></button>
+
+          <button
+            class="cert-dot"
+            data-slide="2"
+            aria-label="Certificate 3"
+          ></button>
+
+        </div>
+
+
+        <button
+          class="cert-arrow"
+          id="certNext"
+          aria-label="Next certificate"
+        >
+
+          <i class="fas fa-arrow-right"></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  
+
+  
 <!-- =========================================================
      EXPERIENCE / JOURNEY
 ========================================================= -->
@@ -3940,306 +4874,7 @@ footer strong {
 </section>
 
 
-  <!-- =========================================================
-     CERTIFICATIONS
-========================================================= -->
-
-<section class="section" id="certifications">
-
-  <div class="container">
-
-    <div class="section-head reveal">
-
-      <div class="section-label">
-        05 — Certifications
-      </div>
-
-      <h2>
-        Learning beyond the classroom.
-      </h2>
-
-      <p>
-        Certifications that support my technical journey.
-      </p>
-
-    </div>
-
-
-    <!-- GLASS CERTIFICATION CARD -->
-
-    <div class="cert-glass-card reveal">
-
-      <div class="cert-track" id="certTrack">
-
-
-        <!-- CERTIFICATE 01 -->
-
-        <article class="certificate-slide">
-
-          <div class="certificate-content">
-
-            <div class="certificate-badge">
-
-              <i class="fas fa-certificate"></i>
-
-              <span>
-                CERTIFICATION
-              </span>
-
-            </div>
-
-
-            <h3>
-              Introduction to Artificial Intelligence
-            </h3>
-
-
-            <p class="certificate-name">
-              Sagar Vishwakarma
-            </p>
-
-
-            <p class="certificate-date">
-              Issued · September 4, 2025
-            </p>
-
-
-            <div class="certificate-actions">
-
-              <a
-                href="certificate-1.pdf"
-                target="_blank"
-                class="cert-btn cert-primary"
-              >
-                <i class="fas fa-eye"></i>
-                View Certificate
-              </a>
-
-
-              <a
-                href="#"
-                target="_blank"
-                class="cert-btn cert-secondary"
-              >
-                Verify
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- CERTIFICATE PREVIEW -->
-
-          <div class="certificate-preview">
-
-            <img
-              src="certificate-1.jpg"
-              alt="Introduction to Artificial Intelligence Certificate"
-              loading="lazy"
-            >
-
-          </div>
-
-        </article>
-
-
-
-        <!-- CERTIFICATE 02 -->
-
-        <article class="certificate-slide">
-
-          <div class="certificate-content">
-
-            <div class="certificate-badge">
-
-              <i class="fas fa-certificate"></i>
-
-              <span>
-                CERTIFICATION
-              </span>
-
-            </div>
-
-
-            <h3>
-              Machine Learning with Python
-            </h3>
-
-
-            <p class="certificate-name">
-              Sagar Vishwakarma
-            </p>
-
-
-            <p class="certificate-date">
-              Issued · 2025
-            </p>
-
-
-            <div class="certificate-actions">
-
-              <a
-                href="certificate-2.pdf"
-                target="_blank"
-                class="cert-btn cert-primary"
-              >
-                <i class="fas fa-eye"></i>
-                View Certificate
-              </a>
-
-
-              <a
-                href="#"
-                target="_blank"
-                class="cert-btn cert-secondary"
-              >
-                Verify
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="certificate-preview">
-
-            <img
-              src="certificate-2.jpg"
-              alt="Machine Learning Certificate"
-              loading="lazy"
-            >
-
-          </div>
-
-        </article>
-
-
-
-        <!-- CERTIFICATE 03 -->
-
-        <article class="certificate-slide">
-
-          <div class="certificate-content">
-
-            <div class="certificate-badge">
-
-              <i class="fas fa-certificate"></i>
-
-              <span>
-                CERTIFICATION
-              </span>
-
-            </div>
-
-
-            <h3>
-              Data Science / Python Certification
-            </h3>
-
-
-            <p class="certificate-name">
-              Sagar Vishwakarma
-            </p>
-
-
-            <p class="certificate-date">
-              Issued · 2025
-            </p>
-
-
-            <div class="certificate-actions">
-
-              <a
-                href="certificate-3.pdf"
-                target="_blank"
-                class="cert-btn cert-primary"
-              >
-                <i class="fas fa-eye"></i>
-                View Certificate
-              </a>
-
-
-              <a
-                href="#"
-                target="_blank"
-                class="cert-btn cert-secondary"
-              >
-                Verify
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="certificate-preview">
-
-            <img
-              src="certificate-3.jpg"
-              alt="Data Science Certificate"
-              loading="lazy"
-            >
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-
-      <!-- SLIDER CONTROLS -->
-
-      <div class="cert-controls">
-
-        <button
-          class="cert-arrow"
-          id="certPrev"
-          aria-label="Previous certificate"
-        >
-          <i class="fas fa-arrow-left"></i>
-        </button>
-
-
-        <div class="cert-dots">
-
-          <button
-            class="cert-dot active"
-            data-slide="0"
-          ></button>
-
-          <button
-            class="cert-dot"
-            data-slide="1"
-          ></button>
-
-          <button
-            class="cert-dot"
-            data-slide="2"
-          ></button>
-
-        </div>
-
-
-        <button
-          class="cert-arrow"
-          id="certNext"
-          aria-label="Next certificate"
-        >
-          <i class="fas fa-arrow-right"></i>
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+ 
 
 <!-- =========================================================
      CONTACT
